@@ -1,9 +1,12 @@
 import './App.css'
 import Button from "./components/Button.jsx";
-import bag_1 from "./assets/bag_1.png"
-import bag_2 from "./assets/bag_2.png"
-import bag_3 from "./assets/bag_3.png"
-import bag_4 from "./assets/bag_4.png"
+import bag_1 from "./assets/bag_1.png";
+import bag_2 from "./assets/bag_2.png";
+import bag_3 from "./assets/bag_3.png";
+import bag_4 from "./assets/bag_4.png";
+import Product from "./components/Product.jsx";
+import brand from "./assets/brand.png";
+import our_story from "./assets/our_story.png"
 
 function App() {
     function handleClick(showText) {
@@ -31,31 +34,56 @@ function App() {
                 />
             </nav>
             <main>
-                <article>
-                    <span>Bestseller</span>
-                    <img src={bag_1} alt="The handy bag" />
-                    <p>The handy bag</p>
-                    <h4>€400,-</h4>
-                </article>
-                <article>
-                    <span>Bestseller</span>
-                    <img src={bag_2} alt="The stylish bag" />
-                    <p>The stylish bag</p>
-                    <h4>€250,-</h4>
-                </article>
-                <article>
-                    <span>Bestseller</span>
-                    <img src={bag_3} alt="The simple bag" />
-                    <p>The simple bag</p>
-                    <h4>€300,-</h4>
-                </article>
-                <article>
-                    <span>Bestseller</span>
-                    <img src={bag_4} alt="The trendy bag" />
-                    <p>The trendy bag</p>
-                    <h4>€150,-</h4>
-                </article>
+                <Product
+                    spanText="Bestseller"
+                    image={bag_1}
+                    title="The handy bag"
+                    description="The handy bag"
+                    price={400}
+                />
+                <Product
+                    spanText="Bestseller"
+                    image={bag_2}
+                    title="The stylish bag"
+                    description="The stylish bag"
+                    price={250}
+                />
+                <Product
+                    spanText="Bestseller"
+                    image={bag_3}
+                    title="The simple bag"
+                    description="The simple bag"
+                    price={300}
+                />
+                <Product
+                    spanText="Bestseller"
+                    image={bag_4}
+                    title="The handy bag"
+                    description="The handy bag"
+                    price={400}
+                />
             </main>
+            <footer>
+                <section>
+                    <h2>Our brand</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis hic impedit maiores
+                        nulla perspiciatis quam quidem temporibus ut voluptatem.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi consequuntur eos est
+                        explicabo itaque molestias nulla obcaecati possimus quibusdam.</p>
+                </section>
+                <section>
+                    <img src={brand} alt="Our brand"/>
+                </section>
+                <section>
+                    <img src={our_story} alt="Our story"/>
+                </section>
+                <section>
+                    <h2>Our story</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut distinctio, dolor error,
+                        excepturi exercitationem fugiat incidunt itaque libero, odit quasi qui repellat sapiente unde
+                        vel. Delectus dolor exercitationem obcaecati.</p>
+                </section>
+            </footer>
         </>
     )
 }
