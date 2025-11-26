@@ -6,7 +6,9 @@ import bag_3 from "./assets/bag_3.png";
 import bag_4 from "./assets/bag_4.png";
 import Product from "./components/Product.jsx";
 import brand from "./assets/brand.png";
-import our_story from "./assets/our_story.png"
+import our_story from "./assets/our_story.png";
+import Tile from "./components/Tile.jsx";
+
 
 function App() {
     function handleClick(showText) {
@@ -64,25 +66,23 @@ function App() {
                 />
             </main>
             <footer>
-                <section>
-                    <h2>Our brand</h2>
+                <Tile title={"Our brand"}>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis hic impedit maiores
                         nulla perspiciatis quam quidem temporibus ut voluptatem.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi consequuntur eos est
                         explicabo itaque molestias nulla obcaecati possimus quibusdam.</p>
-                </section>
-                <section>
+                </Tile>
+                <Tile>
                     <img src={brand} alt="Our brand"/>
-                </section>
-                <section>
+                </Tile>
+                <Tile>
                     <img src={our_story} alt="Our story"/>
-                </section>
-                <section>
-                    <h2>Our story</h2>
+                </Tile>
+                <Tile title="Our story">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut distinctio, dolor error,
                         excepturi exercitationem fugiat incidunt itaque libero, odit quasi qui repellat sapiente unde
                         vel. Delectus dolor exercitationem obcaecati.</p>
-                </section>
+                </Tile>
             </footer>
         </>
     )
